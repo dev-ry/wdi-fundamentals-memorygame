@@ -1,7 +1,7 @@
 console.log("Up and running!");
 
 
-var cards = [
+var cards = [ 
 	{
 		rank: "queen",
 		suit: "hearts",
@@ -49,7 +49,7 @@ var flipCard = function() {
 };
 
 var createBoard = function() {
-	for (var i = 1; i < cards.length; i++) {
+	for (var i = 0; i < cards.length; i++) {
 		var cardElement = document.createElement('img');
 		cardElement.setAttribute('src', "images/back.png");
 		cardElement.setAttribute('data-id', i);
@@ -59,6 +59,17 @@ var createBoard = function() {
 };
 
 createBoard();
+ 
+var reset = function() {
+	cardElement.setAttribute('src', "images/back.png");
+};
+
+var button = document.queryselector('button');
+button.addEventListener('click', reset);
+
+
+
+
 
 
 
